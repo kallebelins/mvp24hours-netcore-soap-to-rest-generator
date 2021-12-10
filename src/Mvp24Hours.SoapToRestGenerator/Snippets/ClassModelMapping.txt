@@ -1,0 +1,22 @@
+﻿using AutoMapper;
+using Mvp24Hours.Core.Contract.Mappings;
+using System;
+[UsingNamespace]
+
+namespace [Namespace]
+{
+    /// <summary>
+    /// [ClassDescription]
+    /// </summary>
+    public class [ClassNameMapped] : IMapFrom<[ClassNameMapped]>
+    {
+        [FieldList]
+
+        [PropertyList]
+
+        public void Mapping(Profile profile)
+        {
+            profile.CreateMap<[ClassNameMapped], [ClassName]>().ReverseMap();
+        }
+    }
+}

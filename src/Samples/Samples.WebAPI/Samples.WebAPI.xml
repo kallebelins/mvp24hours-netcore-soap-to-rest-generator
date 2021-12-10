@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Samples.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:Samples.WebAPI.Controllers.WebService1Controller">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Samples.WebAPI.Controllers.WebService1Controller.Service1(Samples.WebAPI.Models.ModelWithPropertyDto)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Samples.WebAPI.Controllers.WebService1Controller.Service2(Samples.WebAPI.Models.ModelWithFieldDto)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Samples.WebAPI.Controllers.WebService1Controller.ServiceWithList1(Samples.WebAPI.Models.ModelWithPropertyDto)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Samples.WebAPI.Controllers.WebService1Controller.ServiceWithList2(Samples.WebAPI.Models.ModelWithFieldDto)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Samples.WebAPI.Controllers.WebService1Controller.ServiceWithParamSimple1(Samples.WebAPI.WebService.ServiceWithParamSimple1Request)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Samples.WebAPI.Controllers.WebService1Controller.ServiceWithParamSimple2(Samples.WebAPI.WebService.ServiceWithParamSimple2Request)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Samples.WebAPI.Controllers.WebService1Controller.ServiceWithParamSimple3(Samples.WebAPI.WebService.ServiceWithParamSimple3Request)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Samples.WebAPI.Extensions.StartupExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Samples.WebAPI.Extensions.StartupExtensions.AddMyServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Samples.WebAPI.Models.ModelWithFieldDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Samples.WebAPI.Models.ModelWithFieldDto.Field1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Samples.WebAPI.Models.ModelWithFieldDto.Field2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Samples.WebAPI.Models.ModelWithPropertyDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Samples.WebAPI.Models.ModelWithPropertyDto.Property1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Samples.WebAPI.Models.ModelWithPropertyDto.Property2">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

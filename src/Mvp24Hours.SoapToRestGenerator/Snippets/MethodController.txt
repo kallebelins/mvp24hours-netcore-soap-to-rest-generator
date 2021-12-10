@@ -1,0 +1,9 @@
+﻿/// <summary>
+/// [MethodDescription]
+/// </summary>
+[HttpPost]
+[Route("[MethodNameClean]", Name = "[ServiceName][MethodNameClean]")]
+public [ReturnType] [MethodNameClean]([ParametersName])
+{
+    return _serviceClient.[MethodName]([ParametersMethod]);
+}

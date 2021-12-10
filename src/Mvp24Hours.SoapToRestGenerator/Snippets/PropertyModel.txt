@@ -1,0 +1,4 @@
+﻿/// <summary>
+/// [PropertyDescription]
+/// </summary>
+public [PropertyType] [PropertyName] { get; set; }
