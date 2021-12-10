@@ -11,7 +11,7 @@ namespace Mvp24Hours.SoapToRestGenerator.Classes
 
         public string ServiceName { get; set; }
         public string MethodName { get; set; }
-        public ClassProperty ReturnType { get; set; }
+        public string ReturnType { get; set; }
         public List<ClassMethodParameter> Parameters { get; set; }
 
         public string MethodNameClean

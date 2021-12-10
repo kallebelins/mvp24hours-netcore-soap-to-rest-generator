@@ -16,9 +16,6 @@ namespace Mvp24Hours.SoapToRestGenerator
             Templates = new Dictionary<ClassType, string>();
             TemplatesPath = new Dictionary<ClassType, string>()
             {
-                { ClassType.Model, ServiceGeneratorConstants.FILE_CLASS_MODEL },
-                { ClassType.FieldModel, ServiceGeneratorConstants.FILE_FIELD_MODEL },
-                { ClassType.PropertyModel, ServiceGeneratorConstants.FILE_PROPERTY_MODEL },
                 { ClassType.Controller, ServiceGeneratorConstants.FILE_CLASS_CONTROLLER },
                 { ClassType.MethodController, ServiceGeneratorConstants.FILE_METHOD_CONTROLLER }
             };
@@ -34,7 +31,5 @@ namespace Mvp24Hours.SoapToRestGenerator
         public Dictionary<ClassType, string> Descriptions { get; private set; }
         public Dictionary<ClassType, string> Templates { get; private set; }
         public Dictionary<ClassType, string> TemplatesPath { get; private set; }
-        public string ModelPrefix { get; set; }
-        public string ModelSuffix { get; set; }
     }
 }

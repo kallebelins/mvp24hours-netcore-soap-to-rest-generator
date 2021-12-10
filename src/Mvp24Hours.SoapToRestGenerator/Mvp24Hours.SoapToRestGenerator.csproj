@@ -6,42 +6,18 @@
 
   <ItemGroup>
     <None Remove="Snippets\ClassController.txt" />
-    <None Remove="Snippets\ClassModel.txt" />
-    <None Remove="Snippets\ClassModelMapping.txt" />
-    <None Remove="Snippets\FieldModel.txt" />
     <None Remove="Snippets\MethodAsyncController.txt" />
     <None Remove="Snippets\MethodController.txt" />
-    <None Remove="Snippets\MethodMappingAsyncController.txt" />
-    <None Remove="Snippets\MethodMappingController.txt" />
-    <None Remove="Snippets\PropertyModel.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Snippets\ClassController.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Snippets\ClassModelMapping.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Snippets\ClassModel.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Snippets\FieldModel.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Snippets\MethodAsyncController.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Snippets\MethodController.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Snippets\MethodMappingAsyncController.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Snippets\MethodMappingController.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Snippets\PropertyModel.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

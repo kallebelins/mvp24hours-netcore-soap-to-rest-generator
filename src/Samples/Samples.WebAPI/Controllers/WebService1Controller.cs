@@ -1,11 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Mvp24Hours.Infrastructure.Extensions;
 using Mvp24Hours.WebAPI.Controller;
-using Samples.WebAPI.Models;
-using Samples.WebAPI.WebService;
 using System.Threading.Tasks;
 
-namespace Samples.WebAPI.Controllers
+namespace Samples.WebAPI.WebService
 {
     /// <summary>
     /// 
@@ -27,88 +24,72 @@ namespace Samples.WebAPI.Controllers
         /// </summary>
         [HttpPost]
         [Route("Service1", Name = "WebService1Service1")]
-        public async Task<ModelWithPropertyDto> Service1(ModelWithPropertyDto request)
+        public Task<Service1Response> Service1(Service1Request request)
         {
-            Service1Response result = await _serviceClient.Service1Async(request.MapTo<Service1Request>());
-            return result.MapTo<ModelWithPropertyDto>();
+            return _serviceClient.Service1Async(request);
         }
-
         /// <summary>
         /// 
         /// </summary>
         [HttpPost]
         [Route("Service2", Name = "WebService1Service2")]
-        public async Task<ModelWithPropertyDto> Service2(ModelWithPropertyDto request)
+        public Task<Service2Response> Service2(Service2Request request)
         {
-            Service2Response result = await _serviceClient.Service2Async(request.MapTo<Service2Request>());
-            return result.MapTo<ModelWithPropertyDto>();
+            return _serviceClient.Service2Async(request);
         }
-
         /// <summary>
         /// 
         /// </summary>
         [HttpPost]
         [Route("Service3", Name = "WebService1Service3")]
-        public async Task<ModelWithPropertyDto> Service3(ModelWithPropertyDto request)
+        public Task<Service3Response> Service3(Service3Request request)
         {
-            Service3Response result = await _serviceClient.Service3Async(request.MapTo<Service3Request>());
-            return result.MapTo<ModelWithPropertyDto>();
+            return _serviceClient.Service3Async(request);
         }
-
         /// <summary>
         /// 
         /// </summary>
         [HttpPost]
         [Route("Service4", Name = "WebService1Service4")]
-        public async Task<ModelWithFieldDto> Service4(ModelWithFieldDto request)
+        public Task<Service4Response> Service4(Service4Request request)
         {
-            Service4Response result = await _serviceClient.Service4Async(request.MapTo<Service4Request>());
-            return result.MapTo<ModelWithFieldDto>();
+            return _serviceClient.Service4Async(request);
         }
-
         /// <summary>
         /// 
         /// </summary>
         [HttpPost]
         [Route("Service5", Name = "WebService1Service5")]
-        public async Task<ModelWithFieldDto> Service5(ModelWithFieldDto request)
+        public Task<Service5Response> Service5(Service5Request request)
         {
-            Service5Response result = await _serviceClient.Service5Async(request.MapTo<Service5Request>());
-            return result.MapTo<ModelWithFieldDto>();
+            return _serviceClient.Service5Async(request);
         }
-
         /// <summary>
         /// 
         /// </summary>
         [HttpPost]
         [Route("Service6", Name = "WebService1Service6")]
-        public async Task<ModelWithFieldDto> Service6(ModelWithFieldDto request)
+        public Task<Service6Response> Service6(Service6Request request)
         {
-            Service6Response result = await _serviceClient.Service6Async(request.MapTo<Service6Request>());
-            return result.MapTo<ModelWithFieldDto>();
+            return _serviceClient.Service6Async(request);
         }
-
         /// <summary>
         /// 
         /// </summary>
         [HttpPost]
         [Route("Service7", Name = "WebService1Service7")]
-        public async Task<ModelWithPropertyDto> Service7(ModelWithPropertyDto request)
+        public Task<Service7Response> Service7(Service7Request request)
         {
-            Service7Response result = await _serviceClient.Service7Async(request.MapTo<Service7Request>());
-            return result.MapTo<ModelWithPropertyDto>();
+            return _serviceClient.Service7Async(request);
         }
-
         /// <summary>
         /// 
         /// </summary>
         [HttpPost]
         [Route("Service8", Name = "WebService1Service8")]
-        public async Task<ModelWithFieldDto> Service8(ModelWithFieldDto request)
+        public Task<Service8Response> Service8(Service8Request request)
         {
-            Service8Response result = await _serviceClient.Service8Async(request.MapTo<Service8Request>());
-            return result.MapTo<ModelWithFieldDto>();
+            return _serviceClient.Service8Async(request);
         }
-
     }
 }

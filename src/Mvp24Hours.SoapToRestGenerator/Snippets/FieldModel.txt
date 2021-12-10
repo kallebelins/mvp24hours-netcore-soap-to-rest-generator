@@ -1,4 +1,0 @@
-﻿/// <summary>
-/// [FieldDescription]
-/// </summary>
-public [FieldType] [FieldName] { get; set; }

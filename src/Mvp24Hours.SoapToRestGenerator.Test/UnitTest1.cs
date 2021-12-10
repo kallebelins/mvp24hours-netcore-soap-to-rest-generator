@@ -45,67 +45,7 @@ namespace Mvp24Hours.SoapToRestGenerator.Test
         }
 
         [Fact]
-        public void Test1_Models()
-        {
-            var modelOptions = new ServiceGeneratorOptions
-            {
-                Namespace = "MyProject.WebAPI.Models",
-                ServiceName = "MyService",
-                ServiceType = typeof(ServiceClient)
-            };
-
-            var result = ServiceGenerator.GenerateModels(modelOptions);
-            Assert.True(result.Count == 2);
-        }
-
-        [Fact]
-        public void Test2_Models_Mapping()
-        {
-            var modelOptions = new ServiceGeneratorOptions
-            {
-                Namespace = "MyProject.WebAPI.Models",
-                ServiceName = "MyService",
-                ServiceType = typeof(ServiceClient),
-                ModelSuffix = "Dto"
-            };
-            modelOptions.TemplatesPath[ClassType.Model] = ServiceGeneratorConstants.FILE_CLASS_MODEL_MAPPING;
-
-            var result = ServiceGenerator.GenerateModels(modelOptions);
-            Assert.True(result.Count == 2);
-        }
-
-        [Fact]
-        public void Test3_Models_Async()
-        {
-            var modelOptions = new ServiceGeneratorOptions
-            {
-                Namespace = "MyProject.WebAPI.Models",
-                ServiceName = "MyService",
-                ServiceType = typeof(ServiceAsyncClient)
-            };
-
-            var result = ServiceGenerator.GenerateModels(modelOptions);
-            Assert.True(result.Count == 2);
-        }
-
-        [Fact]
-        public void Test4_Models_Mapping_Async()
-        {
-            var modelOptions = new ServiceGeneratorOptions
-            {
-                Namespace = "MyProject.WebAPI.Models",
-                ServiceName = "MyService",
-                ServiceType = typeof(ServiceAsyncClient),
-                ModelSuffix = "Dto"
-            };
-            modelOptions.TemplatesPath[ClassType.Model] = ServiceGeneratorConstants.FILE_CLASS_MODEL_MAPPING;
-
-            var result = ServiceGenerator.GenerateModels(modelOptions);
-            Assert.True(result.Count == 2);
-        }
-
-        [Fact]
-        public void Test5_Controller()
+        public void Test1_Controller()
         {
             var modelOptions = new ServiceGeneratorOptions
             {
@@ -119,24 +59,7 @@ namespace Mvp24Hours.SoapToRestGenerator.Test
         }
 
         [Fact]
-        public void Test6_Controller_Mapping()
-        {
-            var modelOptions = new ServiceGeneratorOptions
-            {
-                Namespace = "MyProject.WebAPI.Controller",
-                ServiceName = "MyService",
-                ServiceType = typeof(ServiceClient),
-                ModelSuffix = "Dto"
-            };
-            modelOptions.TemplatesPath[ClassType.Model] = ServiceGeneratorConstants.FILE_CLASS_MODEL_MAPPING;
-            modelOptions.TemplatesPath[ClassType.MethodController] = ServiceGeneratorConstants.FILE_METHOD_MAPPING_CONTROLLER;
-
-            var result = ServiceGenerator.GenerateController(modelOptions);
-            Assert.True(result != null);
-        }
-
-        [Fact]
-        public void Test7_Controller_Async()
+        public void Test2_Controller_Async()
         {
             var modelOptions = new ServiceGeneratorOptions
             {
@@ -144,28 +67,10 @@ namespace Mvp24Hours.SoapToRestGenerator.Test
                 ServiceName = "MyService",
                 ServiceType = typeof(ServiceAsyncClient)
             };
-            modelOptions.TemplatesPath[ClassType.MethodController] = ServiceGeneratorConstants.FILE_METHOD_MAPPING_ASYNC_CONTROLLER;
+            modelOptions.TemplatesPath[ClassType.MethodController] = ServiceGeneratorConstants.FILE_METHOD_ASYNC_CONTROLLER;
 
             var result = ServiceGenerator.GenerateController(modelOptions);
             Assert.True(result != null);
         }
-
-        [Fact]
-        public void Test8_Controller_Mapping_Async()
-        {
-            var modelOptions = new ServiceGeneratorOptions
-            {
-                Namespace = "MyProject.WebAPI.Controller",
-                ServiceName = "MyService",
-                ServiceType = typeof(ServiceAsyncClient),
-                ModelSuffix = "Dto"
-            };
-            modelOptions.TemplatesPath[ClassType.Model] = ServiceGeneratorConstants.FILE_CLASS_MODEL_MAPPING;
-            modelOptions.TemplatesPath[ClassType.MethodController] = ServiceGeneratorConstants.FILE_METHOD_MAPPING_ASYNC_CONTROLLER;
-
-            var result = ServiceGenerator.GenerateController(modelOptions);
-            Assert.True(result != null);
-        }
-
     }
 }

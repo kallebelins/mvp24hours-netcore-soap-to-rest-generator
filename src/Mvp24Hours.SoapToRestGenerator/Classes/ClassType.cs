@@ -2,10 +2,7 @@
 {
     public enum ClassType
     {
-        PropertyModel,
-        FieldModel,
-        Model,
-        MethodController,
-        Controller
+        Controller,
+        MethodController
     }
 }

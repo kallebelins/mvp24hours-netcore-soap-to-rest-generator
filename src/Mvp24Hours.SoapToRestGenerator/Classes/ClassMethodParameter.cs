@@ -4,6 +4,5 @@
     {
         public string Name { get; set; }
         public string ParameterType { get; set; }
-        public bool IsClass { get; set; }
     }
 }

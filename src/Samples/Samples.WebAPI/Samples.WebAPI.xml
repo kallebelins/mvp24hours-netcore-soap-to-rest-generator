@@ -4,42 +4,47 @@
         <name>Samples.WebAPI</name>
     </assembly>
     <members>
-        <member name="T:Samples.WebAPI.Controllers.WebService1Controller">
+        <member name="T:Samples.WebAPI.WebService.WebService1Controller">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Samples.WebAPI.Controllers.WebService1Controller.Service1(Samples.WebAPI.Models.ModelWithPropertyDto)">
+        <member name="M:Samples.WebAPI.WebService.WebService1Controller.Service1(Samples.WebAPI.WebService.Service1Request)">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Samples.WebAPI.Controllers.WebService1Controller.Service2(Samples.WebAPI.Models.ModelWithFieldDto)">
+        <member name="M:Samples.WebAPI.WebService.WebService1Controller.Service2(Samples.WebAPI.WebService.Service2Request)">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Samples.WebAPI.Controllers.WebService1Controller.ServiceWithList1(Samples.WebAPI.Models.ModelWithPropertyDto)">
+        <member name="M:Samples.WebAPI.WebService.WebService1Controller.Service3(Samples.WebAPI.WebService.Service3Request)">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Samples.WebAPI.Controllers.WebService1Controller.ServiceWithList2(Samples.WebAPI.Models.ModelWithFieldDto)">
+        <member name="M:Samples.WebAPI.WebService.WebService1Controller.Service4(Samples.WebAPI.WebService.Service4Request)">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Samples.WebAPI.Controllers.WebService1Controller.ServiceWithParamSimple1(Samples.WebAPI.WebService.ServiceWithParamSimple1Request)">
+        <member name="M:Samples.WebAPI.WebService.WebService1Controller.Service5(Samples.WebAPI.WebService.Service5Request)">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Samples.WebAPI.Controllers.WebService1Controller.ServiceWithParamSimple2(Samples.WebAPI.WebService.ServiceWithParamSimple2Request)">
+        <member name="M:Samples.WebAPI.WebService.WebService1Controller.Service6(Samples.WebAPI.WebService.Service6Request)">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Samples.WebAPI.Controllers.WebService1Controller.ServiceWithParamSimple3(Samples.WebAPI.WebService.ServiceWithParamSimple3Request)">
+        <member name="M:Samples.WebAPI.WebService.WebService1Controller.Service7(Samples.WebAPI.WebService.Service7Request)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Samples.WebAPI.WebService.WebService1Controller.Service8(Samples.WebAPI.WebService.Service8Request)">
             <summary>
             
             </summary>
@@ -56,36 +61,6 @@
             <param name="services"></param>
             <param name="configuration"></param>
             <returns></returns>
-        </member>
-        <member name="T:Samples.WebAPI.Models.ModelWithFieldDto">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Samples.WebAPI.Models.ModelWithFieldDto.Field1">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Samples.WebAPI.Models.ModelWithFieldDto.Field2">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="T:Samples.WebAPI.Models.ModelWithPropertyDto">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Samples.WebAPI.Models.ModelWithPropertyDto.Property1">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Samples.WebAPI.Models.ModelWithPropertyDto.Property2">
-            <summary>
-            
-            </summary>
         </member>
     </members>
 </doc>
