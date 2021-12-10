@@ -277,7 +277,7 @@ namespace Mvp24Hours.SoapToRestGenerator
 
                     string methodName = item.Name;
 
-                    if (methodName.EndsWith("Asy
+                    if (methodName.EndsWith("Async"))
                         methodName = methodName[0..^5];
 
                     foreach (var param in item.GetParameters())
