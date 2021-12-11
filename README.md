@@ -160,7 +160,7 @@ I created an example project containing:
 
 Access the sample project in the "Samples" folder.
 
-![Project Structure](https://github.com/kallebelins/mvp24hours-netcore-soap-to-rest-generator/blob/main/docs/images/project-structure.png)
+![Project Structure](https://github.com/kallebelins/mvp24hours-netcore-soap-to-rest-generator/blob/main/docs/images/project-structure.PNG)
 
 #### WebService Example
 
@@ -169,3 +169,9 @@ Access the sample project in the "Samples" folder.
 #### Project REST (SOAP => REST)
 
 ![REST](https://github.com/kallebelins/mvp24hours-netcore-soap-to-rest-generator/blob/main/docs/images/rest-swagger.png)
+
+## Give a star! :star:
+If you liked the project or if Mvp24Hours helped you, please give it a star ;)
+
+## About:
+This project was developed by [Kallebe Lins](https://www.linkedin.com/in/kallebelins/) under the [MIT License](LICENSE).
