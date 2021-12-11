@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Mvp24Hours.SoapToRestGenerator\Mvp24Hours.SoapToRestGenerator.csproj" />
-    <ProjectReference Include="..\Samples.WebAPI\Samples.WebAPI.csproj" />
+    <ProjectReference Include="..\Samples.Infrastructure.WebService\Samples.Infrastructure.WebService.csproj" />
   </ItemGroup>
 
   <ItemGroup>

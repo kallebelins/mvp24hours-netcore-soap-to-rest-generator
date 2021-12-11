@@ -10,19 +10,19 @@
 namespace Samples.WebAPI.WebService
 {
     using System.Runtime.Serialization;
-    
-    
+
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ModelWithProperty", Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "ModelWithProperty", Namespace = "http://tempuri.org/")]
     public partial class ModelWithProperty : object
     {
-        
+
         private int Property1Field;
-        
+
         private int Property2Field;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired = true)]
         public int Property1
         {
             get
@@ -34,8 +34,8 @@ namespace Samples.WebAPI.WebService
                 this.Property1Field = value;
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired = true)]
         public int Property2
         {
             get
@@ -48,18 +48,18 @@ namespace Samples.WebAPI.WebService
             }
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ModelWithField", Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "ModelWithField", Namespace = "http://tempuri.org/")]
     public partial class ModelWithField : object
     {
-        
+
         private int Field1Field;
-        
+
         private int Field2Field;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired = true)]
         public int Field1
         {
             get
@@ -71,8 +71,8 @@ namespace Samples.WebAPI.WebService
                 this.Field1Field = value;
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired = true)]
         public int Field2
         {
             get
@@ -85,790 +85,882 @@ namespace Samples.WebAPI.WebService
             }
         }
     }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="Samples.WebAPI.WebService.WebService1Soap")]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName = "Samples.WebAPI.WebService.WebService1Soap")]
     public interface WebService1Soap
     {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Service1", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/Service1", ReplyAction = "*")]
         System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service1Response> Service1Async(Samples.WebAPI.WebService.Service1Request request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Service2", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/Service2", ReplyAction = "*")]
         System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service2Response> Service2Async(Samples.WebAPI.WebService.Service2Request request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Service3", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/Service3", ReplyAction = "*")]
         System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service3Response> Service3Async(Samples.WebAPI.WebService.Service3Request request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Service4", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/Service4", ReplyAction = "*")]
         System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service4Response> Service4Async(Samples.WebAPI.WebService.Service4Request request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Service5", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/Service5", ReplyAction = "*")]
         System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service5Response> Service5Async(Samples.WebAPI.WebService.Service5Request request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Service6", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/Service6", ReplyAction = "*")]
         System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service6Response> Service6Async(Samples.WebAPI.WebService.Service6Request request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Service7", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/Service7", ReplyAction = "*")]
         System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service7Response> Service7Async(Samples.WebAPI.WebService.Service7Request request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Service8", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/Service8", ReplyAction = "*")]
         System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service8Response> Service8Async(Samples.WebAPI.WebService.Service8Request request);
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service1Request
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service1RequestBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service1", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service1RequestBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service1", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service1RequestBody Body;
-        
+
         public Service1Request()
         {
         }
-        
+
         public Service1Request(Samples.WebAPI.WebService.Service1RequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service1RequestBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("request"), Newtonsoft.Json.JsonProperty(PropertyName = "request")] public Samples.WebAPI.WebService.ModelWithProperty requestProperty { get { return request; } set { request = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("request")][Newtonsoft.Json.JsonProperty(PropertyName = "request")]
+public Samples.WebAPI.WebService.ModelWithProperty requestProperty { get { return request; } set { request = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public Samples.WebAPI.WebService.ModelWithProperty request;
-        
+
         public Service1RequestBody()
         {
         }
-        
+
         public Service1RequestBody(Samples.WebAPI.WebService.ModelWithProperty request)
         {
             this.request = request;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service1Response
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service1ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service1Response", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service1ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service1Response", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service1ResponseBody Body;
-        
+
         public Service1Response()
         {
         }
-        
+
         public Service1Response(Samples.WebAPI.WebService.Service1ResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service1ResponseBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("service1Result"), Newtonsoft.Json.JsonProperty(PropertyName = "service1Result")] public Samples.WebAPI.WebService.ModelWithProperty Service1ResultProperty { get { return Service1Result; } set { Service1Result = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("service1Result")][Newtonsoft.Json.JsonProperty(PropertyName = "service1Result")]
+public Samples.WebAPI.WebService.ModelWithProperty Service1ResultProperty { get { return Service1Result; } set { Service1Result = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public Samples.WebAPI.WebService.ModelWithProperty Service1Result;
-        
+
         public Service1ResponseBody()
         {
         }
-        
+
         public Service1ResponseBody(Samples.WebAPI.WebService.ModelWithProperty Service1Result)
         {
             this.Service1Result = Service1Result;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service2Request
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service2RequestBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service2", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service2RequestBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service2", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service2RequestBody Body;
-        
+
         public Service2Request()
         {
         }
-        
+
         public Service2Request(Samples.WebAPI.WebService.Service2RequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service2RequestBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("request1"), Newtonsoft.Json.JsonProperty(PropertyName = "request1")] public Samples.WebAPI.WebService.ModelWithProperty request1Property { get { return request1; } set { request1 = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("request1")][Newtonsoft.Json.JsonProperty(PropertyName = "request1")]
+public Samples.WebAPI.WebService.ModelWithProperty request1Property { get { return request1; } set { request1 = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public Samples.WebAPI.WebService.ModelWithProperty request1;
-[System.Text.Json.Serialization.JsonPropertyName("request2"), Newtonsoft.Json.JsonProperty(PropertyName = "request2")] public Samples.WebAPI.WebService.ModelWithProperty request2Property { get { return request2; } set { request2 = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 1)]
         public Samples.WebAPI.WebService.ModelWithProperty request2;
-        
+
         public Service2RequestBody()
         {
         }
-        
+
         public Service2RequestBody(Samples.WebAPI.WebService.ModelWithProperty request1, Samples.WebAPI.WebService.ModelWithProperty request2)
         {
             this.request1 = request1;
             this.request2 = request2;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service2Response
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service2ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service2Response", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service2ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service2Response", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service2ResponseBody Body;
-        
+
         public Service2Response()
         {
         }
-        
+
         public Service2Response(Samples.WebAPI.WebService.Service2ResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service2ResponseBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("service2Result"), Newtonsoft.Json.JsonProperty(PropertyName = "service2Result")] public Samples.WebAPI.WebService.ModelWithProperty Service2ResultProperty { get { return Service2Result; } set { Service2Result = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("service2Result")][Newtonsoft.Json.JsonProperty(PropertyName = "service2Result")]
+public Samples.WebAPI.WebService.ModelWithProperty Service2ResultProperty { get { return Service2Result; } set { Service2Result = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public Samples.WebAPI.WebService.ModelWithProperty Service2Result;
-        
+
         public Service2ResponseBody()
         {
         }
-        
+
         public Service2ResponseBody(Samples.WebAPI.WebService.ModelWithProperty Service2Result)
         {
             this.Service2Result = Service2Result;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service3Request
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service3RequestBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service3", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service3RequestBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service3", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service3RequestBody Body;
-        
+
         public Service3Request()
         {
         }
-        
+
         public Service3Request(Samples.WebAPI.WebService.Service3RequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service3RequestBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("request1"), Newtonsoft.Json.JsonProperty(PropertyName = "request1")] public Samples.WebAPI.WebService.ModelWithProperty request1Property { get { return request1; } set { request1 = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("request1")][Newtonsoft.Json.JsonProperty(PropertyName = "request1")]
+public Samples.WebAPI.WebService.ModelWithProperty request1Property { get { return request1; } set { request1 = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public Samples.WebAPI.WebService.ModelWithProperty request1;
-[System.Text.Json.Serialization.JsonPropertyName("request2"), Newtonsoft.Json.JsonProperty(PropertyName = "request2")] public Samples.WebAPI.WebService.ModelWithProperty request2Property { get { return request2; } set { request2 = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 1)]
         public Samples.WebAPI.WebService.ModelWithProperty request2;
-        
+
         public Service3RequestBody()
         {
         }
-        
+
         public Service3RequestBody(Samples.WebAPI.WebService.ModelWithProperty request1, Samples.WebAPI.WebService.ModelWithProperty request2)
         {
             this.request1 = request1;
             this.request2 = request2;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service3Response
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service3ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service3Response", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service3ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service3Response", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service3ResponseBody Body;
-        
+
         public Service3Response()
         {
         }
-        
+
         public Service3Response(Samples.WebAPI.WebService.Service3ResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service3ResponseBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("service3Result"), Newtonsoft.Json.JsonProperty(PropertyName = "service3Result")] public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithProperty> Service3ResultProperty { get { return Service3Result; } set { Service3Result = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("service3Result")][Newtonsoft.Json.JsonProperty(PropertyName = "service3Result")]
+public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithProperty> Service3ResultProperty { get { return Service3Result; } set { Service3Result = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithProperty> Service3Result;
-        
+
         public Service3ResponseBody()
         {
         }
-        
+
         public Service3ResponseBody(System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithProperty> Service3Result)
         {
             this.Service3Result = Service3Result;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service4Request
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service4RequestBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service4", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service4RequestBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service4", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service4RequestBody Body;
-        
+
         public Service4Request()
         {
         }
-        
+
         public Service4Request(Samples.WebAPI.WebService.Service4RequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service4RequestBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("request"), Newtonsoft.Json.JsonProperty(PropertyName = "request")] public Samples.WebAPI.WebService.ModelWithField requestProperty { get { return request; } set { request = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("request")][Newtonsoft.Json.JsonProperty(PropertyName = "request")]
+public Samples.WebAPI.WebService.ModelWithField requestProperty { get { return request; } set { request = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public Samples.WebAPI.WebService.ModelWithField request;
-        
+
         public Service4RequestBody()
         {
         }
-        
+
         public Service4RequestBody(Samples.WebAPI.WebService.ModelWithField request)
         {
             this.request = request;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service4Response
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service4ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service4Response", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service4ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service4Response", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service4ResponseBody Body;
-        
+
         public Service4Response()
         {
         }
-        
+
         public Service4Response(Samples.WebAPI.WebService.Service4ResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service4ResponseBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("service4Result"), Newtonsoft.Json.JsonProperty(PropertyName = "service4Result")] public Samples.WebAPI.WebService.ModelWithField Service4ResultProperty { get { return Service4Result; } set { Service4Result = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("service4Result")][Newtonsoft.Json.JsonProperty(PropertyName = "service4Result")]
+public Samples.WebAPI.WebService.ModelWithField Service4ResultProperty { get { return Service4Result; } set { Service4Result = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public Samples.WebAPI.WebService.ModelWithField Service4Result;
-        
+
         public Service4ResponseBody()
         {
         }
-        
+
         public Service4ResponseBody(Samples.WebAPI.WebService.ModelWithField Service4Result)
         {
             this.Service4Result = Service4Result;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service5Request
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service5RequestBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service5", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service5RequestBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service5", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service5RequestBody Body;
-        
+
         public Service5Request()
         {
         }
-        
+
         public Service5Request(Samples.WebAPI.WebService.Service5RequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service5RequestBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("request1"), Newtonsoft.Json.JsonProperty(PropertyName = "request1")] public Samples.WebAPI.WebService.ModelWithField request1Property { get { return request1; } set { request1 = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("request1")][Newtonsoft.Json.JsonProperty(PropertyName = "request1")]
+public Samples.WebAPI.WebService.ModelWithField request1Property { get { return request1; } set { request1 = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public Samples.WebAPI.WebService.ModelWithField request1;
-[System.Text.Json.Serialization.JsonPropertyName("request2"), Newtonsoft.Json.JsonProperty(PropertyName = "request2")] public Samples.WebAPI.WebService.ModelWithField request2Property { get { return request2; } set { request2 = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 1)]
         public Samples.WebAPI.WebService.ModelWithField request2;
-        
+
         public Service5RequestBody()
         {
         }
-        
+
         public Service5RequestBody(Samples.WebAPI.WebService.ModelWithField request1, Samples.WebAPI.WebService.ModelWithField request2)
         {
             this.request1 = request1;
             this.request2 = request2;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service5Response
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service5ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service5Response", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service5ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service5Response", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service5ResponseBody Body;
-        
+
         public Service5Response()
         {
         }
-        
+
         public Service5Response(Samples.WebAPI.WebService.Service5ResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service5ResponseBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("service5Result"), Newtonsoft.Json.JsonProperty(PropertyName = "service5Result")] public Samples.WebAPI.WebService.ModelWithField Service5ResultProperty { get { return Service5Result; } set { Service5Result = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("service5Result")][Newtonsoft.Json.JsonProperty(PropertyName = "service5Result")]
+public Samples.WebAPI.WebService.ModelWithField Service5ResultProperty { get { return Service5Result; } set { Service5Result = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public Samples.WebAPI.WebService.ModelWithField Service5Result;
-        
+
         public Service5ResponseBody()
         {
         }
-        
+
         public Service5ResponseBody(Samples.WebAPI.WebService.ModelWithField Service5Result)
         {
             this.Service5Result = Service5Result;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service6Request
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service6RequestBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service6", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service6RequestBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service6", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service6RequestBody Body;
-        
+
         public Service6Request()
         {
         }
-        
+
         public Service6Request(Samples.WebAPI.WebService.Service6RequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service6RequestBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("request1"), Newtonsoft.Json.JsonProperty(PropertyName = "request1")] public Samples.WebAPI.WebService.ModelWithField request1Property { get { return request1; } set { request1 = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("request1")][Newtonsoft.Json.JsonProperty(PropertyName = "request1")]
+public Samples.WebAPI.WebService.ModelWithField request1Property { get { return request1; } set { request1 = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public Samples.WebAPI.WebService.ModelWithField request1;
-[System.Text.Json.Serialization.JsonPropertyName("request2"), Newtonsoft.Json.JsonProperty(PropertyName = "request2")] public Samples.WebAPI.WebService.ModelWithField request2Property { get { return request2; } set { request2 = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 1)]
         public Samples.WebAPI.WebService.ModelWithField request2;
-        
+
         public Service6RequestBody()
         {
         }
-        
+
         public Service6RequestBody(Samples.WebAPI.WebService.ModelWithField request1, Samples.WebAPI.WebService.ModelWithField request2)
         {
             this.request1 = request1;
             this.request2 = request2;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service6Response
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service6ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service6Response", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service6ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service6Response", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service6ResponseBody Body;
-        
+
         public Service6Response()
         {
         }
-        
+
         public Service6Response(Samples.WebAPI.WebService.Service6ResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service6ResponseBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("service6Result"), Newtonsoft.Json.JsonProperty(PropertyName = "service6Result")] public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithField> Service6ResultProperty { get { return Service6Result; } set { Service6Result = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("service6Result")][Newtonsoft.Json.JsonProperty(PropertyName = "service6Result")]
+public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithField> Service6ResultProperty { get { return Service6Result; } set { Service6Result = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithField> Service6Result;
-        
+
         public Service6ResponseBody()
         {
         }
-        
+
         public Service6ResponseBody(System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithField> Service6Result)
         {
             this.Service6Result = Service6Result;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service7Request
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service7RequestBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service7", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service7RequestBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service7", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service7RequestBody Body;
-        
+
         public Service7Request()
         {
         }
-        
+
         public Service7Request(Samples.WebAPI.WebService.Service7RequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service7RequestBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("request"), Newtonsoft.Json.JsonProperty(PropertyName = "request")] public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithProperty> requestProperty { get { return request; } set { request = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("request")][Newtonsoft.Json.JsonProperty(PropertyName = "request")]
+public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithProperty> requestProperty { get { return request; } set { request = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithProperty> request;
-        
+
         public Service7RequestBody()
         {
         }
-        
+
         public Service7RequestBody(System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithProperty> request)
         {
             this.request = request;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service7Response
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service7ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service7Response", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service7ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service7Response", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service7ResponseBody Body;
-        
+
         public Service7Response()
         {
         }
-        
+
         public Service7Response(Samples.WebAPI.WebService.Service7ResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service7ResponseBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("service7Result"), Newtonsoft.Json.JsonProperty(PropertyName = "service7Result")] public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithProperty> Service7ResultProperty { get { return Service7Result; } set { Service7Result = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("service7Result")][Newtonsoft.Json.JsonProperty(PropertyName = "service7Result")]
+public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithProperty> Service7ResultProperty { get { return Service7Result; } set { Service7Result = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithProperty> Service7Result;
-        
+
         public Service7ResponseBody()
         {
         }
-        
+
         public Service7ResponseBody(System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithProperty> Service7Result)
         {
             this.Service7Result = Service7Result;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service8Request
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service8RequestBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service8", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service8RequestBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service8", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service8RequestBody Body;
-        
+
         public Service8Request()
         {
         }
-        
+
         public Service8Request(Samples.WebAPI.WebService.Service8RequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service8RequestBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("request"), Newtonsoft.Json.JsonProperty(PropertyName = "request")] public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithField> requestProperty { get { return request; } set { request = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("request")][Newtonsoft.Json.JsonProperty(PropertyName = "request")]
+public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithField> requestProperty { get { return request; } set { request = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithField> request;
-        
+
         public Service8RequestBody()
         {
         }
-        
+
         public Service8RequestBody(System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithField> request)
         {
             this.request = request;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class Service8Response
     {
-[System.Text.Json.Serialization.JsonPropertyName("body"), Newtonsoft.Json.JsonProperty(PropertyName = "body")] public Samples.WebAPI.WebService.Service8ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Service8Response", Namespace="http://tempuri.org/", Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("body")][Newtonsoft.Json.JsonProperty(PropertyName = "body")]
+public Samples.WebAPI.WebService.Service8ResponseBody BodyProperty { get { return Body; } set { Body = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "Service8Response", Namespace = "http://tempuri.org/", Order = 0)]
         public Samples.WebAPI.WebService.Service8ResponseBody Body;
-        
+
         public Service8Response()
         {
         }
-        
+
         public Service8Response(Samples.WebAPI.WebService.Service8ResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class Service8ResponseBody
     {
-[System.Text.Json.Serialization.JsonPropertyName("service8Result"), Newtonsoft.Json.JsonProperty(PropertyName = "service8Result")] public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithField> Service8ResultProperty { get { return Service8Result; } set { Service8Result = value; } }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+[System.Text.Json.Serialization.JsonPropertyName("service8Result")][Newtonsoft.Json.JsonProperty(PropertyName = "service8Result")]
+public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithField> Service8ResultProperty { get { return Service8Result; } set { Service8Result = value; } }
+
+[Newtonsoft.Json.JsonIgnore()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithField> Service8Result;
-        
+
         public Service8ResponseBody()
         {
         }
-        
+
         public Service8ResponseBody(System.Collections.Generic.List<Samples.WebAPI.WebService.ModelWithField> Service8Result)
         {
             this.Service8Result = Service8Result;
         }
     }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
     public interface WebService1SoapChannel : Samples.WebAPI.WebService.WebService1Soap, System.ServiceModel.IClientChannel
     {
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
     public partial class WebService1SoapClient : System.ServiceModel.ClientBase<Samples.WebAPI.WebService.WebService1Soap>, Samples.WebAPI.WebService.WebService1Soap
     {
-        
+
         /// <summary>
         /// Implement this partial method to configure the service endpoint.
         /// </summary>
         /// <param name="serviceEndpoint">The endpoint to configure</param>
         /// <param name="clientCredentials">The client credentials</param>
         static partial void ConfigureEndpoint(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Description.ClientCredentials clientCredentials);
-        
-        public WebService1SoapClient(EndpointConfiguration endpointConfiguration) : 
+
+        public WebService1SoapClient(EndpointConfiguration endpointConfiguration) :
                 base(WebService1SoapClient.GetBindingForEndpoint(endpointConfiguration), WebService1SoapClient.GetEndpointAddress(endpointConfiguration))
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
-        
-        public WebService1SoapClient(EndpointConfiguration endpointConfiguration, string remoteAddress) : 
+
+        public WebService1SoapClient(EndpointConfiguration endpointConfiguration, string remoteAddress) :
                 base(WebService1SoapClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
-        
-        public WebService1SoapClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+        public WebService1SoapClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(WebService1SoapClient.GetBindingForEndpoint(endpointConfiguration), remoteAddress)
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
-        
-        public WebService1SoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+        public WebService1SoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(binding, remoteAddress)
         {
         }
-        
+
         public System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service1Response> Service1Async(Samples.WebAPI.WebService.Service1Request request)
         {
             return base.Channel.Service1Async(request);
         }
-        
+
         public System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service2Response> Service2Async(Samples.WebAPI.WebService.Service2Request request)
         {
             return base.Channel.Service2Async(request);
         }
-        
+
         public System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service3Response> Service3Async(Samples.WebAPI.WebService.Service3Request request)
         {
             return base.Channel.Service3Async(request);
         }
-        
+
         public System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service4Response> Service4Async(Samples.WebAPI.WebService.Service4Request request)
         {
             return base.Channel.Service4Async(request);
         }
-        
+
         public System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service5Response> Service5Async(Samples.WebAPI.WebService.Service5Request request)
         {
             return base.Channel.Service5Async(request);
         }
-        
+
         public System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service6Response> Service6Async(Samples.WebAPI.WebService.Service6Request request)
         {
             return base.Channel.Service6Async(request);
         }
-        
+
         public System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service7Response> Service7Async(Samples.WebAPI.WebService.Service7Request request)
         {
             return base.Channel.Service7Async(request);
         }
-        
+
         public System.Threading.Tasks.Task<Samples.WebAPI.WebService.Service8Response> Service8Async(Samples.WebAPI.WebService.Service8Request request)
         {
             return base.Channel.Service8Async(request);
         }
-        
+
         public virtual System.Threading.Tasks.Task OpenAsync()
         {
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
         }
-        
+
         public virtual System.Threading.Tasks.Task CloseAsync()
         {
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginClose(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndClose));
         }
-        
+
         private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
         {
             if ((endpointConfiguration == EndpointConfiguration.WebService1Soap))
@@ -895,7 +987,7 @@ namespace Samples.WebAPI.WebService
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }
-        
+
         private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration)
         {
             if ((endpointConfiguration == EndpointConfiguration.WebService1Soap))
@@ -908,12 +1000,12 @@ namespace Samples.WebAPI.WebService
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }
-        
+
         public enum EndpointConfiguration
         {
-            
+
             WebService1Soap,
-            
+
             WebService1Soap12,
         }
     }

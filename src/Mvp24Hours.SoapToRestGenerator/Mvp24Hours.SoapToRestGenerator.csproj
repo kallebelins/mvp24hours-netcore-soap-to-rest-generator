@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Authors>Kallebe Lins</Authors>
+    <Description>Library for REST API generation for web services translation (SOAP).</Description>
+    <Copyright></Copyright>
+    <PackageProjectUrl>https://github.com/kallebelins/mvp24hours-netcore-soap-to-rest-generator</PackageProjectUrl>
+    <Company>Kallebe Lins</Company>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>2.12.101</Version>
+    <AssemblyVersion>2.12.10.1</AssemblyVersion>
+    <FileVersion>2.12.10.1</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

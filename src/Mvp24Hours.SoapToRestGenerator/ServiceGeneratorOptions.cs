@@ -17,7 +17,7 @@ namespace Mvp24Hours.SoapToRestGenerator
             TemplatesPath = new Dictionary<ClassType, string>()
             {
                 { ClassType.Controller, ServiceGeneratorConstants.FILE_CLASS_CONTROLLER },
-                { ClassType.MethodController, ServiceGeneratorConstants.FILE_METHOD_CONTROLLER }
+                { ClassType.MethodController, ServiceGeneratorConstants.FILE_METHOD_ASYNC_CONTROLLER }
             };
             Descriptions = new Dictionary<ClassType, string>();
             UsingNamespaces = new List<string>();

@@ -8,13 +8,13 @@ namespace Samples.ConsoleGenerator
 {
     public class Program
     {
-        const string FOLDER_MAIN = @"C:/Fabrica/GitHub/mvp24hours-netcore-soap-to-rest-generator/src/Samples/Samples.WebAPI/";
+        const string FOLDER_MAIN = "D:/source/repos/github/mvp24hours-netcore-soap-to-rest-generator/src/Samples/";
 
         static void Main()
         {
 
             // use the full path of the file
-            ServiceGenerator.UpdateFileReference($"{FOLDER_MAIN}Connected Services/Samples.WebAPI.WebService/Reference.cs");
+            ServiceGenerator.UpdateFileReference($"{FOLDER_MAIN}Samples.Infrastructure.WebService/Connected Services/Samples.WebAPI.WebService/Reference.cs");
 
             // creates the controller file from the service
             WriteController();
@@ -31,13 +31,12 @@ namespace Samples.ConsoleGenerator
                 ServiceName = "WebService1",
                 ServiceType = typeof(WebService1SoapClient)
             };
-            controllerOptions.TemplatesPath[ClassType.MethodController] = ServiceGeneratorConstants.FILE_METHOD_ASYNC_CONTROLLER;
 
             controllerOptions.UsingNamespaces.Add("using Samples.WebAPI.WebService;");
 
             var controller = ServiceGenerator.GenerateController(controllerOptions);
 
-            string fileName = GetFilePath($"{FOLDER_MAIN}Controllers/WebService1Controller.cs");
+            string fileName = GetFilePath($"{FOLDER_MAIN}Samples.WebAPI/Controllers/WebService1Controller.cs");
 
             if (Directory.Exists(Path.GetDirectoryName(fileName)))
             {

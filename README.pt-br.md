@@ -1,5 +1,5 @@
 # mvp24hours-netcore-soap-to-rest-generator
-Projeto criado para gerar modelos e controllers para transpor serviços SOAP (XML) em REST (JSON).
+Projeto criado para transpor serviços SOAP (XML) em REST (JSON).
 
 ## Cenário
 
@@ -7,101 +7,156 @@ Alguns serviços necessitam realizar integração, todavia, a manipulação de X
 
 ## Solução
 
-Gerar as classes e modelos para consumir o serviço SOAP, uma vez que criar métodos genéricos automáticos pode afetar a performance.
+Gerar proxy para consumir o serviço SOAP, uma vez que criar métodos genéricos automáticos pode afetar a performance, e alterar o arquivo "Reference.cs" para permitir a serialização para o formato JSON.
 
-### Solução 1 - Serviço Simples
+### Desenvolvendo a Solução
 
-Neste modelo o serviço gera classes/modelos com propriedades.
+Após gerar os proxies para conectar no serviço é necessário atualizar o arquivo que contém os proxies (Reference.cs).
 
 ```csharp
 
-	var modelOptions = new ServiceGeneratorOptions
-	{
-		Namespace = "MyProject.WebAPI.Controller",
-		ServiceName = "MyService",
-		ServiceType = typeof(ServiceClient)
-	};
+	//  sugiro criar uma variável com a pasta raiz
+	const string FOLDER_MAIN = "D:/source/repos/github/mvp24hours-netcore-soap-to-rest-generator/src/Samples/";
 
-	var result = ServiceGenerator.GenerateController(modelOptions);
-	// escrever o resultado da variável "result" em um arquivo "MyServiceController"
+	// Use o caminho absoluto para o arquivo "Reference.cs"
+	ServiceGenerator.UpdateFileReference($"{FOLDER_MAIN}Samples.Infrastructure.WebService/Connected Services/Samples.WebAPI.WebService/Reference.cs");
 
 ```
 
-### Solução 2 - Serviço Assíncrono
-
-Neste modelo queremos usar async/await.
+Após atualizar o arquivo, você poderá gerar a controller baseada no serviço, assim:
 
 ```csharp
 
-	var modelOptions = new ServiceGeneratorOptions
+	//  sugiro criar uma variável com a pasta raiz
+	const string FOLDER_MAIN = "D:/source/repos/github/mvp24hours-netcore-soap-to-rest-generator/src/Samples/";
+
+	// controllers
+	var controllerOptions = new ServiceGeneratorOptions
 	{
-		Namespace = "MyProject.WebAPI.Controller",
-		ServiceName = "MyService",
-		ServiceType = typeof(ServiceClient)
+		Namespace = "Samples.WebAPI.WebService",
+		ServiceName = "WebService1",
+		ServiceType = typeof(WebService1SoapClient)
 	};
-	modelOptions.TemplatesPath[ClassType.MethodController] = ServiceGeneratorConstants.FILE_METHOD_MAPPING_ASYNC_CONTROLLER;
-
-	var result = ServiceGenerator.GenerateController(modelOptions);
-	// escrever o resultado da variável "result" em um arquivo "MyServiceController"
-
-```
-
-
-### Solução 3 - Serviço com Modelos
-
-Alguns serviços geram classes com campos ao invés de propriedades. Neste ponto podemos criar modelos e usar o AutoMapper para transpor os dados de campos para propriedades.
-
-Para gerar os modelos:
-
-```csharp
-
-	var modelOptions = new ServiceGeneratorOptions
-	{
-		Namespace = "MyProject.WebAPI.Models",
-		ServiceName = "MyService",
-		ServiceType = typeof(ServiceClient),
-		ModelSuffix = "Dto"
-	};
-	modelOptions.TemplatesPath[ClassType.Model] = ServiceGeneratorConstants.FILE_CLASS_MODEL_MAPPING;
-	var result = ServiceGenerator.GenerateModels(modelOptions);
-	// escrever o resultado da variável "result" em arquivos que irão representar os modelos
-
-```
-
-Para gerar a controller com models:
-
-```csharp
-
-	var modelOptions = new ServiceGeneratorOptions
-	{
-		Namespace = "MyProject.WebAPI.Controller",
-		ServiceName = "MyService",
-		ServiceType = typeof(ServiceClient),
-		ModelSuffix = "Dto"
-	};
-	modelOptions.TemplatesPath[ClassType.Model] = ServiceGeneratorConstants.FILE_CLASS_MODEL_MAPPING;
-	modelOptions.TemplatesPath[ClassType.MethodController] = ServiceGeneratorConstants.FILE_METHOD_MAPPING_CONTROLLER;
 	
-	var result = ServiceGenerator.GenerateController(modelOptions);
-	// escrever o resultado da variável "result" em um arquivo "MyServiceController"
+	// adicione o namespace de importação da classe "Client" do proxy
+	controllerOptions.UsingNamespaces.Add("using Samples.WebAPI.WebService;");
+
+	// passe os parâmetros para geração da controller
+	var controller = ServiceGenerator.GenerateController(controllerOptions);
+
+	// escreva o arquivo no diretório do projeto
+	File.WriteAllText($"{FOLDER_MAIN}Samples.WebAPI/Controllers/WebService1Controller.cs", controller);
 
 ```
 
-Para gerar controllers com async/await:
+Para gerar uma controller sem async/wait use:
+```csharp
+
+	// controllers
+	var controllerOptions = new ServiceGeneratorOptions {};
+
+	// ...
+
+	// Adicione um template de arquivo
+	controllerOptions.TemplatesPath[ClassType.MethodController] = ServiceGeneratorConstants.FILE_METHOD_CONTROLLER;
+
+```
+
+Caso queira alterar, os arquivos de template (Snippets) estão na pasta gerada na mesma estrutura do projeto. 
+
+Para adicionar um template de conteúdo personalizado (sem necessitar ler arquivo) use:
 
 ```csharp
 
-	var modelOptions = new ServiceGeneratorOptions
-	{
-		Namespace = "MyProject.WebAPI.Controller",
-		ServiceName = "MyService",
-		ServiceType = typeof(ServiceClient),
-		ModelSuffix = "Dto"
-	};
-	modelOptions.TemplatesPath[ClassType.Model] = ServiceGeneratorConstants.FILE_CLASS_MODEL_MAPPING;
-	modelOptions.TemplatesPath[ClassType.MethodController] = ServiceGeneratorConstants.FILE_METHOD_MAPPING_ASYNC_CONTROLLER;
-	
-	var result = ServiceGenerator.GenerateController(modelOptions);
-	// escrever o resultado da variável "result" em um arquivo "MyServiceController"
+	// controllers
+	var controllerOptions = new ServiceGeneratorOptions {};
+
+	// ...
+
+	// Adicione um template de conteúdo
+	modelOptions.Templates[ClassType.MethodController] = "Meu template aqui....";
 
 ```
+
+#### Template de Controller
+
+Os campos usados para o template da Controller são:
+- [UsingNamespace] => Namespace a ser importado;
+- [Namespace] => Namespace da classe;
+- [ServiceName] => Nome do serviço;
+- [ServiceTypeName] => Tipo de serviço;
+- [ControllerDescription] => descrição para a classe Controller;
+- [MethodList] => Template de métodos;
+
+Exemplo:
+
+```csharp
+
+	[UsingNamespace]
+
+	namespace [Namespace]
+	{
+		/// <summary>
+		/// [ControllerDescription]
+		/// </summary>
+		[Produces("application/json")]
+		[Route("api/[controller]")]
+		[ApiController]
+		public class [ServiceName]Controller : BaseMvpController
+		{
+			private readonly [ServiceTypeName] _serviceClient;
+
+			public [ServiceName]Controller([ServiceTypeName] serviceClient)
+			{
+				_serviceClient = serviceClient;
+			}
+
+			[MethodList]
+		}
+	}
+
+```
+
+#### Template de Método
+
+Os campos usados para o template de Métodos são:
+- [ServiceName] => Nome do serviço;
+- [ReturnType] => Tipo de retorno do método;
+- [MethodName] => Nome do método;
+- [MethodNameClean] => Nome do método sem "Async";
+- [ParametersName] => Parâmetros da assinatura do método;
+- [ParametersMethod] => Parâmetros usamos para invocar o método do serviço;
+- [MethodDescription] => Descrição padrão para os métodos;
+
+Exemplo:
+
+```csharp
+
+	/// <summary>
+	/// [MethodDescription]
+	/// </summary>
+	[HttpPost]
+	[Route("[MethodNameClean]", Name = "[ServiceName][MethodNameClean]")]
+	public Task<[ReturnType]> [MethodNameClean]([ParametersName])
+	{
+		return _serviceClient.[MethodName]([ParametersMethod]);
+	}
+
+```
+
+### Projeto de Exemplo
+
+Criei um projeto de exemplo contendo:
+- WebService que fornecerá o serviço;
+- Console para alterar o arquivo "Reference.cs" e criar a Controller;
+- Projeto compartilhado (infraestrutura) com proxy para consumir WebService;
+- Projeto WebAPI configurado com:
+  - Injeção de URL para diversos ambientes (desenvolvimento, teste e produção);
+  - NLog para capturar falhas;
+  - Documentação com Swagger;
+  - API REST;
+
+#### WebService Exemplo
+
+
+#### Projeto REST (SOAP => REST)

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace Mvp24Hours.SoapToRestGenerator
 {
@@ -38,8 +39,17 @@ namespace Mvp24Hours.SoapToRestGenerator
                     string fieldName = line.Split(' ').ElementAtOrDefault(2)?.Replace(";", "") ?? string.Empty;
                     string fieldNameProperty = char.ToLower(fieldName[0]) + fieldName[1..];
                     string typeContent = line.Split(' ').ElementAtOrDefault(1);
-                    lines.Insert(index - 2, "[System.Text.Json.Serialization.JsonPropertyName(\"" + fieldNameProperty + "\"), Newtonsoft.Json.JsonProperty(PropertyName = \"" + fieldNameProperty + "\")] public " + typeContent + " " + fieldName + "Property { get { return " + fieldName + "; } set { " + fieldName + " = value; } }");
-                    index++;
+
+                    var newLine = new StringBuilder();
+                    newLine.Append("[System.Text.Json.Serialization.JsonPropertyName(\"" + fieldNameProperty + "\")]");
+                    newLine.AppendLine("[Newtonsoft.Json.JsonProperty(PropertyName = \"" + fieldNameProperty + "\")]");
+                    newLine.AppendLine("public " + typeContent + " " + fieldName + "Property { get { return " + fieldName + "; } set { " + fieldName + " = value; } }");
+                    newLine.AppendLine("");
+
+                    newLine.Append("[Newtonsoft.Json.JsonIgnore()]");
+
+                    lines.Insert(index - 1, newLine.ToString());
+                    index += 5;
                 }
                 index++;
             }
