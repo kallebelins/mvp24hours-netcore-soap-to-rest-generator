@@ -45,7 +45,7 @@ namespace Samples.WebAPI
 
             if (!env.IsProduction())
             {
-                app.UseMvp24HoursSwagger("SoapToRestGenerator API");
+                app.UseMvp24HoursSwagger("Samples API");
             }
 
             app.UseMvp24Hours();

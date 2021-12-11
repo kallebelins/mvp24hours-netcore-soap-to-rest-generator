@@ -152,11 +152,19 @@ Criei um projeto de exemplo contendo:
 - Projeto compartilhado (infraestrutura) com proxy para consumir WebService;
 - Projeto WebAPI configurado com:
   - Injeção de URL para diversos ambientes (desenvolvimento, teste e produção);
-  - NLog para capturar falhas;
+  - NLog para capturar falhas através de Middleware de tratamento de exceção;
   - Documentação com Swagger;
   - API REST;
+  - Usa biblioteca Mvp24Hours para acelerar as configurações;
+
+Acesse o projeto de exemplo na pasta "Samples".
+
+![Project Structure](https://github.com/kallebelins/mvp24hours-netcore-soap-to-rest-poc/blob/main/docs/images/project-structure.png)
 
 #### WebService Exemplo
 
+![WebService](https://github.com/kallebelins/mvp24hours-netcore-soap-to-rest-poc/blob/main/docs/images/webservice-wsdl.png)
 
 #### Projeto REST (SOAP => REST)
+
+![REST](https://github.com/kallebelins/mvp24hours-netcore-soap-to-rest-poc/blob/main/docs/images/rest-swagger.png)

@@ -1,4 +1,11 @@
-﻿using Mvp24Hours.SoapToRestGenerator.Classes;
+﻿//=====================================================================================
+// Developed by Kallebe Lins (kallebe.santos@outlook.com)
+// Teacher, Architect, Consultant and Project Leader
+// Virtual Card: https://www.linkedin.com/in/kallebelins
+//=====================================================================================
+// Reproduction or sharing is free! Contribute to a better world!
+//=====================================================================================
+using Mvp24Hours.SoapToRestGenerator.Classes;
 using System;
 using System.Collections.Generic;
 
