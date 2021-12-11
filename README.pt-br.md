@@ -159,12 +159,12 @@ Criei um projeto de exemplo contendo:
 
 Acesse o projeto de exemplo na pasta "Samples".
 
-![Project Structure](https://github.com/kallebelins/mvp24hours-netcore-soap-to-rest-poc/blob/main/docs/images/project-structure.png)
+![Project Structure](https://github.com/kallebelins/mvp24hours-netcore-soap-to-rest-generator/blob/main/docs/images/project-structure.png)
 
 #### WebService Exemplo
 
-![WebService](https://github.com/kallebelins/mvp24hours-netcore-soap-to-rest-poc/blob/main/docs/images/webservice-wsdl.png)
+![WebService](https://github.com/kallebelins/mvp24hours-netcore-soap-to-rest-generator/blob/main/docs/images/webservice-wsdl.png)
 
 #### Projeto REST (SOAP => REST)
 
-![REST](https://github.com/kallebelins/mvp24hours-netcore-soap-to-rest-poc/blob/main/docs/images/rest-swagger.png)
+![REST](https://github.com/kallebelins/mvp24hours-netcore-soap-to-rest-generator/blob/main/docs/images/rest-swagger.png)
