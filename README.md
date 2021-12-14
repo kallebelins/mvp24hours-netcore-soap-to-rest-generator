@@ -9,9 +9,23 @@ Some services need to perform integration, however, handling XML for web service
 
 Generate proxy to consume the SOAP service, since creating automatic generic methods can affect performance, and change the "Reference.cs" file to allow serialization to JSON format.
 
+### Prerequisites
+
+You will have to add the package "Mvp24Hours.SoapToRestGenerator" to the project. Preferably create a console project to update your API project.
+
+```csharp
+/// Package Manager Console >
+
+Install-Package Mvp24Hours.SoapToRestGenerator -Version 2.12.101
+```
+
+A folder with the code templates files will be created. Copy the folder with the "Snippets" template files to the executable folder. If you're using Visual Studio, change the files ownership to send a copy of the files to the output folder.
+
 ### Developing the Solution
 
 After generating the proxies to connect to the service, it is necessary to update the file containing the proxies (Reference.cs).
+
+In your project, console for example, define the absolute path of the file "Reference.cs" and run the method "ServiceGenerator.UpdateFileReference".
 
 ```csharp
 
@@ -158,7 +172,7 @@ I created an example project containing:
    - REST API;
    - Uses Mvp24Hours library to speed up settings;
 
-Access the sample project in the "Samples" folder.
+Access the sample project in the "src/Samples" folder.
 
 ![Project Structure](https://github.com/kallebelins/mvp24hours-netcore-soap-to-rest-generator/blob/main/docs/images/project-structure.PNG)
 

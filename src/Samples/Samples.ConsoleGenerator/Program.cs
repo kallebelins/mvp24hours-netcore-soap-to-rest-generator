@@ -6,7 +6,6 @@
 // Reproduction or sharing is free! Contribute to a better world!
 //=====================================================================================
 using Mvp24Hours.SoapToRestGenerator;
-using Mvp24Hours.SoapToRestGenerator.Classes;
 using Samples.WebAPI.WebService;
 using System;
 using System.IO;
